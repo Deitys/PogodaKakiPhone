@@ -8,36 +8,37 @@ import com.hfad.vlad.pogodakakiphone.descriptions.SysDescription;
 import com.hfad.vlad.pogodakakiphone.descriptions.WeatherDescription;
 import com.hfad.vlad.pogodakakiphone.descriptions.WindDescription;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class CurrentWeatherResponse {
 
     @SerializedName("coord")
-    private List<CoordDescription> coord;
+    private List<CoordDescription> coord = new ArrayList<>();
 
     @SerializedName("weather")
-    private List<WeatherDescription> weather;
+    private List<WeatherDescription> weather = new ArrayList<>();
 
     @SerializedName("base")
     private String base;
 
     @SerializedName("main")
-    private List<MainDescription> main;
+    private List<MainDescription> main = new ArrayList<>();
 
     @SerializedName("visibility")
     private long visibility;
 
     @SerializedName("wind")
-    private List<WindDescription> wind;
+    private List<WindDescription> wind = new ArrayList<>();
 
     @SerializedName("clouds")
-    private List<CloudsDescription> clouds;
+    private List<CloudsDescription> clouds = new ArrayList<>();
 
     @SerializedName("dt")
     private long dt;
 
     @SerializedName("sys")
-    private List<SysDescription> sys;
+    private List<SysDescription> sys = new ArrayList<>();
 
     @SerializedName("id")
     private long id;
