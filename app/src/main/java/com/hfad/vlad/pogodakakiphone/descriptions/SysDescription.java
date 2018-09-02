@@ -17,11 +17,26 @@ public class SysDescription {
     private String country;
 
     @SerializedName("sunrise")
-    private double sunrise;
+    private Long sunrise;
 
     @SerializedName("sunset")
-    private double sunset;
+    private Long sunset;
 
+    public Long getSunrise() {
+        return sunrise;
+    }
+
+    public void setSunrise(Long sunrise) {
+        this.sunrise = sunrise;
+    }
+
+    public Long getSunset() {
+        return sunset;
+    }
+
+    public void setSunset(Long sunset) {
+        this.sunset = sunset;
+    }
 
     public double getType() {
         return type;
@@ -55,19 +70,6 @@ public class SysDescription {
         this.country = country;
     }
 
-    public double getSunrise() {
-        return sunrise;
+
     }
 
-    public void setSunrise(double sunrise) {
-        this.sunrise = sunrise;
-    }
-
-    public double getSunset() {
-        return sunset;
-    }
-
-    public void setSunset(double sunset) {
-        this.sunset = sunset;
-    }
-}
