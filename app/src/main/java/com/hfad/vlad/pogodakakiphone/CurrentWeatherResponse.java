@@ -14,31 +14,31 @@ import java.util.List;
 public class CurrentWeatherResponse {
 
     @SerializedName("coord")
-    private List<CoordDescription> coord = new ArrayList<>();
+    private CoordDescription coord;
 
     @SerializedName("weather")
-    private List<WeatherDescription> weather = new ArrayList<>();
+    private List<WeatherDescription> weather;
 
     @SerializedName("base")
     private String base;
 
     @SerializedName("main")
-    private List<MainDescription> main = new ArrayList<>();
+    private MainDescription main;
 
     @SerializedName("visibility")
     private long visibility;
 
     @SerializedName("wind")
-    private List<WindDescription> wind = new ArrayList<>();
+    private WindDescription wind;
 
     @SerializedName("clouds")
-    private List<CloudsDescription> clouds = new ArrayList<>();
+    private CloudsDescription clouds;
 
     @SerializedName("dt")
     private long dt;
 
     @SerializedName("sys")
-    private List<SysDescription> sys = new ArrayList<>();
+    private SysDescription sys;
 
     @SerializedName("id")
     private long id;
@@ -49,11 +49,11 @@ public class CurrentWeatherResponse {
     @SerializedName("cod")
     private long cod;
 
-    public List<CoordDescription> getCoord() {
+    public CoordDescription getCoord() {
         return coord;
     }
 
-    public void setCoord(List<CoordDescription> coord) {
+    public void setCoord(CoordDescription coord) {
         this.coord = coord;
     }
 
@@ -73,11 +73,11 @@ public class CurrentWeatherResponse {
         this.base = base;
     }
 
-    public List<MainDescription> getMain() {
+    public MainDescription getMain() {
         return main;
     }
 
-    public void setMain(List<MainDescription> main) {
+    public void setMain(MainDescription main) {
         this.main = main;
     }
 
@@ -89,19 +89,19 @@ public class CurrentWeatherResponse {
         this.visibility = visibility;
     }
 
-    public List<WindDescription> getWind() {
+    public WindDescription getWind() {
         return wind;
     }
 
-    public void setWind(List<WindDescription> wind) {
+    public void setWind(WindDescription wind) {
         this.wind = wind;
     }
 
-    public List<CloudsDescription> getClouds() {
+    public CloudsDescription getClouds() {
         return clouds;
     }
 
-    public void setClouds(List<CloudsDescription> clouds) {
+    public void setClouds(CloudsDescription clouds) {
         this.clouds = clouds;
     }
 
@@ -113,11 +113,11 @@ public class CurrentWeatherResponse {
         this.dt = dt;
     }
 
-    public List<SysDescription> getSys() {
+    public SysDescription getSys() {
         return sys;
     }
 
-    public void setSys(List<SysDescription> sys) {
+    public void setSys(SysDescription sys) {
         this.sys = sys;
     }
 

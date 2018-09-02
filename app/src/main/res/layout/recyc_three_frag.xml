@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/recyc_three_frag">
+
+
+
+    <TextView
+        android:id="@+id/dayThree"
+        android:layout_width="164dp"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:padding="10dp"
+        android:text="Day"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <ImageView
+        android:id="@+id/iconThree"
+        android:layout_width="135dp"
+        android:layout_height="26dp"
+        android:paddingTop="5dp" />
+
+    <TextView
+        android:id="@+id/maxTempThree"
+        android:layout_width="42dp"
+        android:layout_height="29dp"
+        android:textColor="@android:color/white"
+        android:text="MaxTemp" />
+
+    <TextView
+        android:id="@+id/minTempThree"
+        android:layout_width="42dp"
+        android:layout_height="29dp"
+        android:textColor="@android:color/white"
+        android:text="MinTemp" />
+
+
+
+
+</LinearLayout>
