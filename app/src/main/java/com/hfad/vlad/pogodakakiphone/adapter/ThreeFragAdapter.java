@@ -283,7 +283,8 @@ public class ThreeFragAdapter extends RecyclerView.Adapter<ThreeFragAdapter.View
             } else {
                 mTempMaxOne = tempDayOneMax.get(0);
             }
-            tempMaxSegOne = Double.toString(Math.round(mTempMaxOne - 273)).substring(0, 2);
+            String tempMaxSegOne1 = Double.toString(Math.round(mTempMaxOne - 273));
+            tempMaxSegOne = tempMaxSegOne1.substring(0, tempMaxSegOne1.length() - 2);
 
             double mTempMaxTwo;
             if (tempDayTwoMax.size() > 1) {
@@ -291,7 +292,8 @@ public class ThreeFragAdapter extends RecyclerView.Adapter<ThreeFragAdapter.View
             } else {
                 mTempMaxTwo = tempDayTwoMax.get(0);
             }
-            tempMaxSegTwo = Double.toString(Math.round(mTempMaxTwo - 273)).substring(0, 2);
+            String tempMaxSegTwo2 = Double.toString(Math.round(mTempMaxTwo - 273));
+            tempMaxSegTwo = tempMaxSegTwo2.substring(0, tempMaxSegTwo2.length() - 2);
 
             double mTempMaxThree;
             if (tempDayThreeMax.size() > 1) {
@@ -299,7 +301,8 @@ public class ThreeFragAdapter extends RecyclerView.Adapter<ThreeFragAdapter.View
             } else {
                 mTempMaxThree = tempDayThreeMax.get(0);
             }
-            tempMaxSegThree = Double.toString(Math.round(mTempMaxThree - 273)).substring(0, 2);
+            String tempMaxSegThree3 = Double.toString(Math.round(mTempMaxThree - 273));
+            tempMaxSegThree = tempMaxSegThree3.substring(0, tempMaxSegThree3.length() - 2);
 
             double mTempMaxFour;
             if (tempDayFourMax.size() > 1) {
@@ -307,7 +310,8 @@ public class ThreeFragAdapter extends RecyclerView.Adapter<ThreeFragAdapter.View
             } else {
                 mTempMaxFour = tempDayFourMax.get(0);
             }
-            tempMaxSegFour = Double.toString(Math.round(mTempMaxFour - 273)).substring(0, 2);
+            String tempMaxSegFour4 = Double.toString(Math.round(mTempMaxFour - 273));
+            tempMaxSegFour = tempMaxSegFour4.substring(0, tempMaxSegFour4.length() - 2);
 
 
             double mTempMaxFive;
@@ -316,7 +320,8 @@ public class ThreeFragAdapter extends RecyclerView.Adapter<ThreeFragAdapter.View
             } else {
                 mTempMaxFive = tempDayFiveMax.get(0);
             }
-            tempMaxSegFive = Double.toString(Math.round(mTempMaxFive - 273)).substring(0, 2);
+            String tempMaxSegFive5 = Double.toString(Math.round(mTempMaxFive - 273));
+            tempMaxSegFive = tempMaxSegFive5.substring(0, tempMaxSegFive5.length() - 2);
 
             double mTempMaxSix;
             if (tempDaySixMax.size() > 1) {
@@ -324,7 +329,8 @@ public class ThreeFragAdapter extends RecyclerView.Adapter<ThreeFragAdapter.View
             } else {
                 mTempMaxSix = tempDaySixMax.get(0);
             }
-            tempMaxSegSix = Double.toString(Math.round(mTempMaxSix - 273)).substring(0, 2);
+            String tempMaxSegSix6 = Double.toString(Math.round(mTempMaxSix - 273));
+            tempMaxSegSix = tempMaxSegSix6.substring(0, tempMaxSegSix6.length() - 2);
 
             double mTempMinOne;
             if (tempDayOneMin.size() > 1) {
@@ -332,7 +338,8 @@ public class ThreeFragAdapter extends RecyclerView.Adapter<ThreeFragAdapter.View
             } else {
                 mTempMinOne = tempDayOneMin.get(0);
             }
-            tempMinSegOne = Double.toString(Math.round(mTempMinOne - 273)).substring(0, 2);
+            String tempMinSegOne1 = Double.toString(Math.round(mTempMinOne - 273));
+            tempMinSegOne = tempMinSegOne1.substring(0, tempMinSegOne1.length() - 2);
 
             double mTempMinTwo;
             if (tempDayTwoMin.size() > 1) {
@@ -340,7 +347,8 @@ public class ThreeFragAdapter extends RecyclerView.Adapter<ThreeFragAdapter.View
             } else {
                 mTempMinTwo = tempDayTwoMin.get(0);
             }
-            tempMinSegTwo = Double.toString(Math.round(mTempMinTwo - 273)).substring(0, 2);
+            String tempMinSegTwo2 = Double.toString(Math.round(mTempMinTwo - 273));
+            tempMinSegTwo = tempMinSegTwo2.substring(0, tempMinSegTwo2.length() - 2);
 
             double mTempMinThree;
             if (tempDayThreeMin.size() > 1) {
@@ -348,7 +356,8 @@ public class ThreeFragAdapter extends RecyclerView.Adapter<ThreeFragAdapter.View
             } else {
                 mTempMinThree = tempDayThreeMin.get(0);
             }
-            tempMinSegThree = Double.toString(Math.round(mTempMinThree - 273)).substring(0, 2);
+            String tempMinSegThree3 = Double.toString(Math.round(mTempMinThree - 273));
+            tempMinSegThree = tempMinSegThree3.substring(0, tempMinSegThree3.length() - 2);
 
             double mTempMinFour;
             if (tempDayFourMin.size() > 1) {
@@ -356,7 +365,8 @@ public class ThreeFragAdapter extends RecyclerView.Adapter<ThreeFragAdapter.View
             } else {
                 mTempMinFour = tempDayFourMin.get(0);
             }
-            tempMinSegFour = Double.toString(Math.round(mTempMinFour - 273)).substring(0, 2);
+            String tempMinSegFour4 = Double.toString(Math.round(mTempMinFour - 273));
+            tempMinSegFour = tempMinSegFour4.substring(0,tempMinSegFour4.length() - 2);
 
 
             double mTempMinFive;
@@ -365,7 +375,8 @@ public class ThreeFragAdapter extends RecyclerView.Adapter<ThreeFragAdapter.View
             } else {
                 mTempMinFive = tempDayFiveMin.get(0);
             }
-            tempMinSegFive = Double.toString(Math.round(mTempMinFive - 273)).substring(0, 2);
+            String tempMinSegFive5 = Double.toString(Math.round(mTempMinFive - 273));
+            tempMinSegFive = tempMinSegFive5.substring(0, tempMinSegFive5.length() - 2);
 
             double mTempMinSix;
             if (tempDaySixMin.size() > 1) {
@@ -373,7 +384,8 @@ public class ThreeFragAdapter extends RecyclerView.Adapter<ThreeFragAdapter.View
             } else {
                 mTempMinSix = tempDaySixMin.get(0);
             }
-            tempMinSegSix = Double.toString(Math.round(mTempMinSix - 273)).substring(0, 2);
+            String tempMinSegSix6 = Double.toString(Math.round(mTempMinSix - 273));
+            tempMinSegSix = tempMinSegSix6.substring(0, tempMinSegSix6.length() - 2);
 
 
 

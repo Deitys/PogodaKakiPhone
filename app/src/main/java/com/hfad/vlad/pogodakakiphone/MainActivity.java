@@ -1,5 +1,8 @@
 package com.hfad.vlad.pogodakakiphone;
 
+import android.Manifest;
+import android.location.Location;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -29,8 +32,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class MainActivity extends AppCompatActivity {
 
     private static final String APPID = "f1ca516628a8d4eeb5801689d85ce55b"; //API Key
-    private static final double lat = 55.79;
-    private static final double lon = 49.12;
+    private static double lat;
+    private static double lon;
 
     private final String baseURL = "https://api.openweathermap.org/";
 
@@ -51,6 +54,20 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         EventBus.getDefault().register(this);
         TempEvent tempEvent = new TempEvent();
+
+        ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 123);
+        ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION} , 124);
+        ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.INTERNET} , 125);
+
+        GPSTracker gpsTracker = new GPSTracker(getApplicationContext());
+        Location location = gpsTracker.getLocation();
+        if (location != null) {
+            lat = location.getLatitude();
+            lon = location.getLongitude();
+        } else  {
+            lat = 55.79;
+            lon = 49.12;
+        }
 
 
         FirstFragment firstFragment = new FirstFragment();
