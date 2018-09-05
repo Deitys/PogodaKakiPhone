@@ -1,6 +1,7 @@
 package com.hfad.vlad.pogodakakiphone;
 
 
+import android.location.Location;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -25,8 +26,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class SecondFragment extends Fragment {
 
     private static final String APPID = "f1ca516628a8d4eeb5801689d85ce55b"; //API Key
-    private static final double lat = 55.79;
-    private static final double lon = 49.12;
+    private static double lat;
+    private static double lon;
 
     private final String baseURL = "https://api.openweathermap.org/";
 
@@ -55,6 +56,16 @@ public class SecondFragment extends Fragment {
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
         layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
         list_second.setLayoutManager(layoutManager);
+        GPSTracker gpsTracker = new GPSTracker(getActivity().getApplicationContext());
+        Location location = gpsTracker.getLocation();
+        if (location != null) {
+            lat = location.getLatitude();
+            lon = location.getLongitude();
+        } else  {
+            lat = 55.79;
+            lon = 49.12;
+        }
+
 
 
 
